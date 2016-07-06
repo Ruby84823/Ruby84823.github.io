@@ -9,49 +9,122 @@ body{
   background-color: #F1E1FF;
   margin: 0;
 }
+div{
+	display: block;
+}
+a:link {
+		color: #646464;
+	}
+a:any-link{
+		cursor: auto;
+	}
+ul{
+		display: block;
+		margin-top: 1em;
+		margin-bottom: 1em;
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+	li{
+		list-style: none;
+		display: list-item;
+	}
+	option{
+		display: block;
+		white-space: pre;
+		min-height: 1.2em;
+		padding-bottom: 1px;
+		padding-right: 2px;
+		padding-left: 2px;
+	}
 .header{
+  position:relative;
   text-align: center;
-  height: 150px;
+  height: 180px;
   width: 100%;
-  background-image: url(0704/back.gif);
+  background-image: url(0704/botton.gif);
+}
+.logo{
+	text-align: center;
+	position: relative;
+	padding-top:-20px; 
+	width: -20px;
 }
 .nav{
-  text-align: center;
+  overflow: hidden;
+  margin:auto;
   height: 50px;
   width: 100%;
-  vertical-align:top;
+  text-align: center;
 }
+.menu{
+	width: 100%;
+	display: table;
+	table-layout: fixed;
+	vertical-align: top;
+	background-image: url(0704/back.gif);
+	height: 80px;
+}
+.menu .menu1{
+	position: relative;
+	text-align: center;
+	line-height: 5px;
+}
+.menu .menu1 li{
+	display: inline;
+	font-size: 15px;
+	float: left;
+	list-style: none;
+	margin-left: 210px;
+}
+.menu .menu1 li a{
+	position: relative;
+	overflow: hidden;
+	color: #777777;
+	font-weight: bold;
+}
+.menu .menu1 li a:hover,
+.menu .menu1 li a:focus{
+		color: #FF0000;
+	}
 .container{
       margin-top: 100px;
       margin-bottom: 200px;
       text-align: center;
 }
 .container img{
-	width:auto;
-	height: auto;
+	width:100%;
+	height: 100%;
 }
 .footer{
-  text-align: center;
-  height: 100px;
-  width: 100%;
-  clear: both;
-  color: blue;
-  font-size: 15px;
-  margin-bottom:20px; 
+	position: relative;
+    text-align: center;
+    height:80px;
+    width: 100%;
+    line-height:1.5;
+    color: #fff;
+    font-size: 18px;
+    background-image: url(0704/botton.gif);
+}
+.footer .baby select {
+	border-radius: 0;
+	border-color: #fff;
 }
 </style>
 </head>
 
 <body>
 	<div class="header">
+	<div class=logo>
+		<img src="0704/logo.png" />
+	</div>
 		<div class="nav">
-		<div>
-			<a href="#" class="logo">logo</a>
-			<ul class="menu">
-				    <li class="mu1"><a href="#">About</a></li>
-					<li class="mu2"><a href="#">Knowledge</a></li>
-					<li class="mu3"><a href="#">Notice</a></li>
-					<li class="mu4"><a href="#">Photo</a></li>
+		<div class="menu">
+			<ul class="menu1">
+				    <li><a href="#">About</a></li>
+					<li><a href="#">Knowledge</a></li>
+					<li><a href="#">Notice</a></li>
+					<li><a href="#">Photo</a></li>
 				</ul>
 		</div>
 		</div>
@@ -59,6 +132,18 @@ body{
 			<img src="0704/baby.jpg" />
 		</div>
   <div class="footer">
- 
+  <div>I Love Baby<br />
+        2016/07
+  </div>
+  <div class="baby">
+  	<select name="select" onchange="gopage(value)">
+  	    <option>baby</option>
+  		<option value="#">About</option>
+  		<option value="#">Knowledge</option>
+  		<option value="#">Notice</option>
+  		<option value="#">Photo</option>
+  	</select>
+  </div>
+  </div>
 </body>
 </html>
