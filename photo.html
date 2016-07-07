@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>溫馨時光</title>
+<style type="text/css">
+body{
+  background-color: #F1E1FF;
+  margin: 0;
+}
+div{
+  display: block;
+}
+a:link {
+    color: #646464;
+  }
+a:any-link{
+    cursor: auto;
+  }
+ul{
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  li{
+    list-style: none;
+    display: list-item;
+  }
+  option{
+    display: block;
+    white-space: pre;
+    min-height: 1.2em;
+    padding-bottom: 1px;
+    padding-right: 2px;
+    padding-left: 2px;
+  }
+.header{
+  position:relative;
+  text-align: center;
+  height: 180px;
+  width: 100%;
+  background-image: url(0704/botton.gif);
+}
+.logo{
+  text-align: center;
+  position: relative;
+  padding-top:-20px; 
+  width: 100%;
+}
+.nav{
+  overflow: hidden;
+  margin:auto;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+}
+.menu{
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  vertical-align: top;
+  background-image: url(0704/back.gif);
+  height: 80px;
+}
+.menu .menu1{
+  position: relative;
+  text-align: center;
+  line-height: 5px;
+}
+.menu .menu1 li{
+  display: inline;
+  font-size: 15px;
+  float: left;
+  list-style: none;
+  margin-left: 210px;
+}
+.menu .menu1 li a{
+  position: relative;
+  overflow: hidden;
+  color: #777777;
+  font-weight: bold;
+}
+.menu .menu1 li a:hover,
+.menu .menu1 li a:focus{
+    color: #FF0000;
+  }
+.container{
+      margin-top: 100px;
+      margin-bottom: 200px;
+      text-align: center;
+  }
+  .container img{
+    width: 1000px;
+    height: 600px;
+    padding-left: 183px;
+  }
+.footer{
+  position: relative;
+    text-align: center;
+    height:80px;
+    width: 100%;
+    line-height:1.5;
+    color: #fff;
+    font-size: 18px;
+    background-image: url(0704/botton.gif);
+}
+.footer .baby select {
+  border-radius: 0;
+  border-color: #fff;
+}
+</style>
+</head>
+
+<body>
+  <div class="header">
+  <div class=logo>
+    <a href="http://peekaboomoments.com/zh-TW/timeline/537202808#/"><img src="0704/logo.png" /></a>
+  </div>
+    <div class="nav">
+    <div class="menu">
+      <ul class="menu1">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Photo</a></li>
+          <li><a href="#">Film</a></li>
+          <li><a href="#">Knowledge</a></li>
+      </ul>
+    </div>
+    </div>
+    <div class="container">
+      <img class="slide" src="0704/baby1.jpeg" />
+      <img class="slide" src="0704/baby2.jpeg" />
+      <img class="slide" src="0704/baby3.jpeg"/>
+      <img class="slide" src="0704/baby4.jpeg" />
+  </div>
+  <div class="footer">
+  <div>I Love Baby<br />
+        2016/07
+  </div>
+  <div class="baby">
+    <select name="select" onchange="gopage(value)">
+        <option>baby</option>
+      <option value="About">About</option>
+      <option value="Photo">Photo</option>
+      <option value="Film">Film</option>
+      <option value="Knowledge">Knowledge</option>
+
+    </select>
+  </div>
+  </div>
+</body>
+</html>
