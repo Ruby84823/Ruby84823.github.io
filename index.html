@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" href="0704/bootstrap-theme.min">
+<meta name="viewport" content="width=device-width , initial-scale=1">
 <title>溫馨時光</title>
 <style type="text/css">
 body{
@@ -91,11 +91,15 @@ ul{
       margin-top: 100px;
       margin-bottom: 200px;
       text-align: center;
-}
-.container img{
-	width:100%;
-	height: 100%;
-}
+  }
+  .container img{
+  	width: 1000px;
+  	height: 600px;
+    padding-left: 183px;
+  }
+ .container img .slide{
+  	display: none;
+  }
 .footer{
 	position: relative;
     text-align: center;
@@ -116,20 +120,36 @@ ul{
 <body>
 	<div class="header">
 	<div class=logo>
-		<img src="0704/logo.png" />
+		<a href="http://peekaboomoments.com/zh-TW/timeline/537202808#/"><img src="0704/logo.png" /></a>
 	</div>
 		<div class="nav">
 		<div class="menu">
 			<ul class="menu1">
 				    <li><a href="#">About</a></li>
+				    <li><a href="#">Photo</a></li>
+					<li><a href="#">Film</a></li>
 					<li><a href="#">Knowledge</a></li>
-					<li><a href="#">Notice</a></li>
-					<li><a href="#">Photo</a></li>
-				</ul>
+			</ul>
 		</div>
 		</div>
 		<div class="container">
-			<img src="0704/baby.jpg" />
+		<div>
+			<img class="slide" src="0704/baby1.jpeg" />
+			<img class="slide" src="0704/baby2.jpeg" />
+			<img class="slide" src="0704/baby3.jpeg"/>
+			<img class="slide" src="0704/baby4.jpeg" />
+			<div class="about">
+		</div>
+  <div class="txt" tag="About">
+  <h2>About</h2>
+  <h3>小檔案</h3>
+  <p></p>
+  <h3>Love</h3>
+  	<p>每個孩子都是上天賜予的禮物<br />
+  	看著他們一天一天的成長<br />
+  	煩躁時看著他們天使般的笑容，心情會不由自主的變好<br />不過有時候很盧的時候，會覺得又好氣又好笑甚至帶點無奈。</p>
+  	</div>
+  </div>
 		</div>
   <div class="footer">
   <div>I Love Baby<br />
@@ -138,12 +158,30 @@ ul{
   <div class="baby">
   	<select name="select" onchange="gopage(value)">
   	    <option>baby</option>
-  		<option value="#">About</option>
-  		<option value="#">Knowledge</option>
-  		<option value="#">Notice</option>
-  		<option value="#">Photo</option>
+  		<option value="About">About</option>
+  		<option value="Photo">Photo</option>
+  		<option value="Film">Film</option>
+  		<option value="Knowledge">Knowledge</option>
+
   	</select>
   </div>
   </div>
+  <script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("slide");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 2000); //Change image every 2 seconds
+}
+</script>
+
 </body>
 </html>
